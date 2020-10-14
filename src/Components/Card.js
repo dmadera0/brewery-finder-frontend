@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function card({brewery}) {
 
-    handleClick = () => {
+    // handleClick = () => {
         
-    }
+    // }
 
     return(
         <div className='card'>
@@ -12,7 +12,7 @@ export default function card({brewery}) {
             <h3>{brewery.city}</h3>
             <h3>{brewery.phone}</h3>
             <h3>{brewery.url}</h3>
-            <button onClick={handleClick}>Add to Favorites</button>
+            {/* <button onClick={handleClick}>Add to Favorites</button> */}
         </div>
     )
 }
