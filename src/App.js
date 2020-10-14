@@ -26,6 +26,12 @@ class App extends Component {
       <div className="App">
         <h1>Brew Finder!</h1>
         <main>
+          <section className = "favorites">
+            <h2>Favorites</h2>
+            <Breweries 
+            breweries={this.state.favoritedBreweries}
+          />
+          </section>
           <section className='all-breweries'>
             <h2>All Breweries</h2>
             <Breweries 
