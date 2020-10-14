@@ -26,13 +26,15 @@ class App extends Component {
         favoritedBreweries: [...this.state.favoritedBreweries, clickedBrewery]
       })
     }
-    // fetch('http://localhost:7000/favorites',{
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   body: JSON.stringify()
-    //   }
-    // })
+    fetch('http://localhost:7000/favorites',{
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      body: JSON.stringify(
+        
+      )
+      }
+    })
   }
 
   // removeFromFavorites = (clickedBrewery) => {
