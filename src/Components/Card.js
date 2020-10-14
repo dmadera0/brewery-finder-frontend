@@ -1,10 +1,6 @@
 import React from 'react'
 
-export default function card({brewery, addToFavorites}) {
-
-    const handleClick = () => {
-        addToFavorites(brewery)
-    }
+export default function card({brewery, onClick}) {
 
     return(
         <div className='card'>
@@ -12,7 +8,9 @@ export default function card({brewery, addToFavorites}) {
             <h3>{brewery.city}</h3>
             <h3>{brewery.phone}</h3>
             <h3>{brewery.url}</h3>
-            <button onClick={handleClick}>❤️</button>
+            <button 
+                onClick={() => onClick(brewery)}
+            >❤️</button>
         </div>
     )
 }
