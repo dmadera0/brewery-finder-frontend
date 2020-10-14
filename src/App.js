@@ -15,11 +15,35 @@ class App extends Component {
       .then(result => this.setState({allBreweries: result}))
   }
 
-  addToFavorites = (brewery) => {
-    this.setState({
-      favoritedBreweries: [...this.state.favoritedBreweries, brewery]
+  addToFavorites = (clickedBrewery) => {
+
+    const thisBrewery = this.state.favoritedBreweries.find(brewery => {
+      return brewery.id === clickedBrewery.id
     })
+
+    if (!thisBrewery) {
+      this.setState({
+        favoritedBreweries: [...this.state.favoritedBreweries, clickedBrewery]
+      })
+    }
+    // fetch('http://localhost:7000/favorites',{
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   body: JSON.stringify()
+    //   }
+    // })
   }
+
+  // removeFromFavorites = (clickedBrewery) => {
+  //   const thatBrewery = this.state.favoritedBreweries.filters(brewery => {
+  //     return brewery.id !== clickedBrewery.id
+  //   })
+
+  //   this.setState({
+  //     favoritedBreweries: [...thatBrewery]
+  //   })
+  // }
 
   render() {
     return (
