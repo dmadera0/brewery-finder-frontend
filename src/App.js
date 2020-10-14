@@ -4,7 +4,13 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h2>Brewery App</h2>
+
+      <h1>Brew Finder!</h1>
+      <main>
+        <section className='all-breweries'>
+          <h2>All Breweries</h2>
+        </section>
+      </main>
     </div>
   );
 }
