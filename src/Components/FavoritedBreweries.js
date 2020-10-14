@@ -1,14 +1,14 @@
 import React from 'react'
 import Card from './Card'
 
-export default function Breweries({breweries, addToFavorites}) {
+export default function Favoritedbreweries({breweries, removeFromFavorites}) {
     const displaybreweries = () => {
         return breweries.map(brewery => {
             return (
                 <Card 
                     key={brewery.id} 
                     brewery={brewery}
-                    onClick={addToFavorites}
+                    onClick={removeFromFavorites}
                 />
             )
         })
