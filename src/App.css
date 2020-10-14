@@ -1,7 +1,68 @@
 .App {
+  
+  background-color: #2e2a24;
+  color: #f9d094;
   text-align: center;
+  
+  background-position: center, center;
+  background-size: 500px, 500px, cover;
+
 }
 
-.background{
-  color: ;
+.phone-number {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
 }
+
+
+
+.favoritedbreweries {
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%
+}
+
+
+.breweries {
+  
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%
+}
+
+.card{
+  background-color: #3d2303;
+  display: flex;
+  width: 30%;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid burlywood;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+/* .header{
+  display: flex;
+  width: fit-content;
+  flex-flow: column wrap;
+} */
+
+.card:hover {
+  transform: scale(1.1)
+}
+
+.like-button {
+  
+  width: fit-content;
+  padding: 5px;
+  margin: 5px;
+}
+
+body {
+  background-color: #2e2a24;
+}
+

@@ -77,9 +77,11 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Brew Finder!</h1>
+        
         <main>
           {this.state.isLoggedIn ? 
-          <div>
+          <div className="header">
+            <img src="https://brew.sh/assets/img/homebrew-256x256.png"></img>
             <button onClick={this.signOut}>Sign Out</button>
             <section className = "favorites">
               <h2>Favorites</h2>
@@ -97,6 +99,7 @@ class App extends Component {
             </section>
           </div> : 
           <div>
+          <img src="https://i.imgur.com/lainPny.gif"></img>
             <form>
               <input name="name" placeholder="enter name"></input>
               <input 
